@@ -27,33 +27,29 @@
 
     <!-- Nav -->
     <nav>
-        <div class="container">
-            <h1></h1>
-            <ul></ul>
+        <div class="container sm-70 md-70 lg-70 xl-70">
+            <h1>Mealify</h1>
+            <!-- TODO: nav bar -->
+            <ul class="nav-links" id="navlinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#chefs">Chefs</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
             <div class="modes">
-                <label for=""></label>
-                <label for=""></label>
-                <input type="text">
+                <input type="checkbox" id="mode" class="mode" hidden/>
+                <label for="mode" class="toggle-modes">
+                    <i class="fa-solid fa-moon fa-2xl dark-mode"></i>
+                    <i class="fa-solid fa-sun fa-2xl light-mode"></i>
+                </label>
+                
             </div>
         </div>
-
     </nav>
 
     <!-- Hero -->
-    <hero class="landing">
-        <div class="container">
-            <!-- TODO: nav bar -->
-            <div class="navbar">
-                <div class="links">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#chefs">Chefs</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-
+    <hero id="home" class="landing">
+        <div class="container sm-70 md-70 lg-70 xl-70">
             <!-- Hero-Content -->
             <div class="hero-content">
                 <div class="hero-content-col">
@@ -72,8 +68,8 @@
 
 
     <!-- Chefs -->
-    <section>
-        <div class="container">
+    <section id="chefs" class="chefs">
+        <div class="container sm-70 md-70 lg-70 xl-70">
             <div class="chefs-title">
                 <h2></h2>
                 <p><span></span></p>
@@ -112,10 +108,18 @@
 
 
     <!-- Gallery -->
-
+    <section id="gallery" class="gallery">
+        <div class="container sm-70 md-70 lg-70 xl-70">
+            <div class="gallery-title">
+                <h2></h2>
+                <p><span></span></p>
+            </div>
+            <div class="gallery-img"></div>
+        </div>
+    </section>
     <!-- Contact -->
-    <section>
-        <div class="contatiner">
+    <section id="contact" class="contact">
+        <div class="container sm-70 md-70 lg-70 xl-70">
             <div class="contact-title">
                 <h2></h2>
                 <p><span></span></p>
@@ -135,7 +139,7 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container">
+        <div class="container sm-70 md-70 lg-70 xl-70">
             <div class="about"></div>
             <div class="subscribe"></div>
             <div class="footer-contact"></div>

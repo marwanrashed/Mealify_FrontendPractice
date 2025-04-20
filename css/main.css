@@ -7,7 +7,179 @@
 
 /* HTML Styles */
 
+:root {
+    /*  Default Light Mode Colors */
+    --color-black: #212529;
+    --color-white: #ffffff;
+    --color-light-grey: #EEEEEE;
+    --color-medium-grey: #F5F5F5;
+    --color-dark-grey: #7D7D7D;
+    --color-darker-grey: #212529;
+    --color-darkest-grey: #37373F;
+    --color-red: #E21414;
+    --color-primary: var(--color-white);
+    /*bg: Nav, chefs, contact, contact-form. colors footer items, */
+    --color-secondary: var(--color-light-grey);
+    /*bg: Hero, gallery*/
+    --color-tertiary: var(--color-red);
+    /*color the following: Icons, Paragraph Spans, buttons, borders*/
+    --color-quaternary: var(--color-medium-grey);
+    /*bg: contact-info divs*/
+    --text-color-primary: var(--color-black);
+    /*colors: H1,nav icons, nav links after hover, chef-cards H3, Sections title P*/
+    --text-color-secondary: var(--color-darkest-grey);
+    /*colors: Hero H2, */
+    --text-color-tertiary: var(--color-dark-grey);
+    /*colors: Paragraphs, contact cards titles*/
+    --font-family-base: 'paragraph-Open-Sans', "paragraph-Noto-Sans", "paragraph-Roboto", sans-serif;
+    --font-family-title: 'header-Amatic', sans-serif;
+    --font-family-header: 'header-Inter', sans-serif;
+    --font-size-small: calc(20/16 * 1rem);
+    --font-size-medium: calc(24/16 * 1rem);
+    --font-size-large: calc(30/16 * 1rem);
+    --font-size-x-large: calc(36/16 * 1rem);
+    --font-size-xx-large: calc(65/16 * 1rem);
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --common-padding: calc(40/16 * 1rem) calc(5/16 * 1rem);
+    --btn-padding-xs: calc(10/16 * 1rem) calc(10/16 * 1rem);
+    --btn-padding-sm: calc(5/16 * 1rem) calc(15/16 * 1rem);
+    --btn-padding-md: calc(10/16 * 1rem) calc(25/16 * 1rem);
+    --btn-padding-lg: calc(12/16 * 1rem) calc(40/16 * 1rem);
+    --animation-duration: 0.5s;
+}
 
 
+/* Containers */
 
+.container {
+    padding: var(--common-padding);
+    width: 100%;
+    margin-inline: auto;
+}
 
+/* shared */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-header);
+    color: var(--text-color-tertiary);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--font-size-medium);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color-tertiary);
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-bold);
+}
+
+span {
+    font-family: var(--font-family-header);
+    color: var(--color-tertiary);
+}
+
+p {
+    font-family: var(--font-family-base);
+}
+
+/* navbar */
+nav {
+    background-color: var(--color-primary);
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 0 1rem 2px var(--color-light-grey);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--common-padding);
+}
+
+nav .container h1 {
+    color: var(--text-color-primary);
+    font-size: var(--font-size-x-large);
+    font-weight: var(--font-weight-bold);
+}
+
+nav .container h1::after {
+    content: ".";
+    color: var(--color-tertiary);
+}
+
+.nav-links {
+    --link-border-width: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.light-mode {
+    display: none;
+}
+.dark-mode {
+    display: block;
+    cursor: pointer;
+}
+#mode:checked ~ label .dark-mode {
+    display: none;
+}
+
+#mode:checked ~ label .light-mode {
+    display: block;
+    cursor: pointer;
+}
+
+html:not(html:has(:target)) li a[href="#home"]::before,
+html:has(.landing:target) li a[href="#home"]::before,
+html:has(.chefs:target) li a[href="#chefs"]::before,
+html:has(.gallery:target) li a[href="#gallery"]::before,
+html:has(.contact:target) li a[href="#contact"]::before{
+    width: calc(100% - (var(--link-border-width)*2));
+}
+
+html:not(html:has(:target) li a[href="#home"]),
+html:has(.landing:target) li a[href="#home"],
+html:has(.chefs:target) li a[href="#chefs"],
+html:has(.gallery:target) li a[href="#gallery"],
+html:has(.contact:target) li a[href="#contact"]{
+  color: var(--color-black);
+}
+
+.nav-links li a {
+    position: relative;
+    padding: var(--btn-padding-sm);
+}
+
+.nav-links li a::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: var(--color-tertiary);
+    position: absolute;
+    bottom: -4px;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+.nav-links li a:hover::before,
+a.active::before {
+    width: calc(100% - (var(--link-border-width)*2));
+}
+
+.nav-links li a:hover,
+a.active {
+    color: var(--color-black);
+}

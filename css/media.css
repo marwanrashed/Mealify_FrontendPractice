@@ -11,6 +11,18 @@ Media Query
         width: 100% !important;
     }
 
+    .sm-80 {
+        width: 80% !important;
+    }
+
+    .sm-70 {
+        width: 70% !important;
+    }
+    
+    .sm-60 {
+        width: 60% !important;
+    }
+
     .sm-50 {
         width: 50% !important;
     }
@@ -38,6 +50,18 @@ Media Query
 
     .md-100 {
         width: 100% !important;
+    }
+
+    .md-80 {
+        width: 80% !important;
+    }
+
+    .md-70 {
+        width: 70% !important;
+    }
+    
+    .md-60 {
+        width: 60% !important;
     }
 
     .md-50 {
@@ -69,6 +93,18 @@ Media Query
         width: 100% !important;
     }
 
+    .lg-80 {
+        width: 80% !important;
+    }
+
+    .lg-70 {
+        width: 70% !important;
+    }
+
+    .lg-60 {
+        width: 60% !important;
+    }
+
     .lg-50 {
         width: 50% !important;
     }
@@ -96,6 +132,18 @@ Media Query
 @media screen and (min-width: 1536px) {
     .xl-100 {
         width: 100% !important;
+    }
+
+    .xl-80 {
+        width: 80% !important;
+    }
+
+    .xl-70 {    
+        width: 70% !important;
+    }
+
+    .xl-60 {    
+        width: 60% !important;
     }
 
     .xl-50 {
