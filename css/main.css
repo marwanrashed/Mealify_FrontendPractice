@@ -6,30 +6,40 @@
 }
 
 /* HTML Styles */
-
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
 :root {
     /*  Default Light Mode Colors */
-    --color-black: #212529;
+    --color-light-mode-black: #212529;
     --color-white: #ffffff;
-    --color-light-grey: #EEEEEE;
-    --color-medium-grey: #F5F5F5;
-    --color-dark-grey: #7D7D7D;
-    --color-darker-grey: #212529;
-    --color-darkest-grey: #37373F;
+    --color-light-mode-light-grey: #EEEEEE;
+    --color-light-mode-medium-grey: #F5F5F5;
+    --color-light-mode-dark-grey: #7D7D7D;
+    --color-light-mode-darker-grey: #212529;
+    --color-light-mode-darkest-grey: #37373F;
+    /* Default Dark Mode Colors */
+    --color-dark-mode-black: #212529;
+    --color-dark-mode-light-grey: #252525 ;
+    --color-dark-mode-medium-grey: #202020;
+    --color-dark-mode-dark-grey: #171717;
+    --color-dark-mode-darker-grey: #0D0D0D;
     --color-red: #E21414;
+    --color-gold: #D78C23;
     --color-primary: var(--color-white);
     /*bg: Nav, chefs, contact, contact-form. colors footer items, */
-    --color-secondary: var(--color-light-grey);
+    --color-secondary: var(--color-light-mode-light-grey);
     /*bg: Hero, gallery*/
     --color-tertiary: var(--color-red);
     /*color the following: Icons, Paragraph Spans, buttons, borders*/
-    --color-quaternary: var(--color-medium-grey);
+    --color-quaternary: var(--color-light-mode-medium-grey);
     /*bg: contact-info divs*/
-    --text-color-primary: var(--color-black);
+    --text-color-primary: var(--color-light-mode-black);
     /*colors: H1,nav icons, nav links after hover, chef-cards H3, Sections title P*/
-    --text-color-secondary: var(--color-darkest-grey);
+    --text-color-secondary: var(--color-light-mode-darkest-grey);
     /*colors: Hero H2, */
-    --text-color-tertiary: var(--color-dark-grey);
+    --text-color-tertiary: var(--color-light-mode-dark-grey);
     /*colors: Paragraphs, contact cards titles*/
     --font-family-base: 'paragraph-Open-Sans', "paragraph-Noto-Sans", "paragraph-Roboto", sans-serif;
     --font-family-title: 'header-Amatic', sans-serif;
@@ -47,6 +57,15 @@
     --btn-padding-md: calc(10/16 * 1rem) calc(25/16 * 1rem);
     --btn-padding-lg: calc(12/16 * 1rem) calc(40/16 * 1rem);
     --animation-duration: 0.5s;
+}
+
+:root:has(#mode:checked) {
+    --color-primary: var(--color-dark-mode-black);
+    --color-secondary: var(--color-dark-mode-light-grey);
+    --color-tertiary: var(--color-gold);
+    --color-quaternary: var(--color-light-grey);
+    --text-color-primary: var(--color-white);
+    --text-color-secondary: var(--color-white);
 }
 
 
@@ -156,7 +175,7 @@ html:has(.landing:target) li a[href="#home"],
 html:has(.chefs:target) li a[href="#chefs"],
 html:has(.gallery:target) li a[href="#gallery"],
 html:has(.contact:target) li a[href="#contact"]{
-  color: var(--color-black);
+  color: var(--text-color-primary);
 }
 
 .nav-links li a {
@@ -181,5 +200,13 @@ a.active::before {
 
 .nav-links li a:hover,
 a.active {
-    color: var(--color-black);
+    color: var(--text-color-primary);
+}
+
+.menu {
+    color: var(--text-color-primary);
+}
+
+.close-icon {
+    display: none;
 }
