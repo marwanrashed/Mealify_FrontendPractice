@@ -141,7 +141,7 @@ nav .container h1::after {
 .nav-links {
     --link-border-width: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-items: center;
     align-items: center;
     flex-wrap: wrap;
 }
