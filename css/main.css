@@ -437,25 +437,43 @@ header .container .hero-content {
     transform: scale(1.05);
 }
 
+.chefs picture {
+    position: relative;
+    overflow: hidden;
+}
+
 .chefs picture .chef-img{
     width: 100%;
-    position: relative;
+    overflow: hidden;
 }
 
 .chef-card .chef-img img {
     width: 100%;
 }
 
-.waves-svg {
+.chef-cards .chef-card picture:before {
+    content: "";
     position: absolute;
-    top: 50%;
+    bottom: -1px;
     left: 0;
-    
-}
+    background-image: url("../images/team-shape.svg");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 3.5rem;
+  }
 
-#mode:checked ~ .waves-svg {
-    filter: invert(1);
-}
+  :root:has(#mode:checked) .chef-cards .chef-card picture:before {
+    background-image: url("../images/team-shape-dark.svg");
+  }
+
+/* .waves-svg {
+    position: absolute;
+    bottom: 38.9%;
+    left: 1px;
+    color: var(--color-quinary)
+    
+} */
+
 
 .chef-content {
     display: flex;
