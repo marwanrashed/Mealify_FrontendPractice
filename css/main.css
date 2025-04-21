@@ -314,7 +314,13 @@ header .container .hero-content {
 
 .video-btn {
     color: var(--text-color-secondary);
+    transition: color var(--animation-duration) ease-in-out;
 }
+
+.video-btn:hover {
+    color: var(--color-tertiary);
+}
+
 .video-btn > .video-icon {
   background-color: var(--color-primary);
   padding: 0.8rem;
@@ -351,6 +357,7 @@ header .container .hero-content {
     background-color: var(--color-tertiary);
 
 }
+
 
 .hero-content .hero-img img {
     width: 100%;
