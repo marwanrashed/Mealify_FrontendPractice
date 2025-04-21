@@ -34,6 +34,7 @@ html {
     --color-tertiary: var(--color-red);
     /*color the following: Icons, Paragraph Spans, buttons, borders*/
     --color-quaternary: var(--color-light-mode-medium-grey);
+    --color-quinary: var(--color-white);
     /*bg: contact-info divs*/
     --text-color-primary: var(--color-light-mode-black);
     /*colors: H1,nav icons, nav links after hover, chef-cards H3, Sections title P*/
@@ -47,11 +48,13 @@ html {
     --font-family-base: 'paragraph-Open-Sans', "paragraph-Noto-Sans", "paragraph-Roboto", sans-serif;
     --font-family-title: 'header-Amatic', sans-serif;
     --font-family-header: 'header-Inter', sans-serif;
+    --font-size-xs: 1rem;
     --font-size-small: calc(20/16 * 1rem);
     --font-size-medium: calc(24/16 * 1rem);
     --font-size-large: calc(30/16 * 1rem);
     --font-size-x-large: calc(36/16 * 1rem);
-    --font-size-xx-large: calc(65/16 * 1rem);
+    --font-size-xx-large: calc(48/16 * 1rem);
+    --font-size-xxx-large: calc(65/16 * 1rem);
     --font-weight-regular: 400;
     --font-weight-bold: 700;
     --common-padding: calc(40/16 * 1rem) calc(5/16 * 1rem);
@@ -63,10 +66,11 @@ html {
 }
 
 :root:has(#mode:checked) {
-    --color-primary: var(--color-dark-mode-black);
+    --color-primary: var(--color-dark-mode-medium-grey);
     --color-secondary: var(--color-dark-mode-light-grey);
     --color-tertiary: var(--color-gold);
     --color-quaternary: var(--color-light-grey);
+    --color-quinary: var(--color-dark-mode-dark-grey);
     --text-color-primary: var(--color-white);
     --text-color-secondary: var(--color-white);
     --text-color-btn-primary: var(--color-dark-mode-black);
@@ -104,14 +108,36 @@ h6 {
     color: var(--text-color-tertiary);
     font-weight: var(--font-weight-regular);
     line-height: var(--font-size-medium);
+    
 }
 
-header h2 {
+section h2 {
+    font-size: var(--font-size-xs);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h2, 
+section h3 {
     font-family: var(--font-family-title);
-    font-size: var(--font-size-xx-large);
     color: var(--text-color-secondary);
+    line-height: var(--font-size-xxx-large);
+    text-transform: uppercase;
+}
+
+section h3 {
+    font-size: var(--font-size-xx-large);
+    text-align: center;
+    font-weight: var(--font-weight-regular);
+}
+
+section h3 > span {
+    font-family: var(--font-family-title);
+    color: var(--color-tertiary);
+}
+header h2 {
+    font-size: var(--font-size-xxx-large);
     font-weight: var(--font-weight-bold);
-    line-height: var(--font-size-xx-large);
 }
 ul {
     list-style-type: none;
@@ -124,15 +150,13 @@ a {
     font-weight: var(--font-weight-bold);
 }
 
-span {
-    font-family: var(--font-family-header);
-    color: var(--color-tertiary);
-}
-
 p {
     font-family: var(--font-family-base);
 }
 
+.bg-primary {
+    background-color: var(--color-primary);
+}
 .bg-secondary {
     background-color: var(--color-secondary);
 }
@@ -173,9 +197,6 @@ nav .container h1::after {
     flex-wrap: wrap;
 }
 
-.modes {
-    flex-basis: ;
-}
 .light-mode {
     display: none;
 }
@@ -383,3 +404,64 @@ header .container .hero-content {
     100% { transform: translate(0, 0) rotate(0deg); }
 }
 
+
+/* Chefs Section */
+.chefs {
+    text-align: center;
+}
+.chefs-title {
+    margin-bottom: 3rem;
+}
+
+.chef-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    flex-wrap: wrap;
+    --gap: 1.5rem;
+}
+
+.chef-cards .chef-card {
+    width: calc(calc(100% - var(--gap) *2) / 3);
+    border-radius: 1.5rem;
+    background-color: var(--color-quinary);
+    box-shadow: 0 0 1rem 1px rgba(0,0,26, 0.5);
+    transition: transform var(--animation-duration) ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.chef-cards .chef-card:hover {
+    transform: scale(1.05);
+}
+
+.chefs picture .chef-img{
+    width: 100%;
+    position: relative;
+}
+
+.chef-card .chef-img img {
+    width: 100%;
+}
+
+.waves-svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    
+}
+
+#mode:checked ~ .waves-svg {
+    filter: invert(1);
+}
+
+.chef-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+}
