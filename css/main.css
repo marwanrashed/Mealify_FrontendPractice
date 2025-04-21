@@ -75,6 +75,15 @@ html {
     padding: var(--common-padding);
     width: 100%;
     margin-inline: auto;
+    --margin-top: 0;
+    --margin-bottom: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+    --padding-left:0;
+    --padding-right:0;
+    margin-top: var(--margin-top);
+    margin-bottom: var(--margin-bottom);
+    
 }
 
 /* shared */
@@ -91,6 +100,13 @@ h6 {
     line-height: var(--font-size-medium);
 }
 
+header h2 {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    color: var(--text-color-secondary);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-size-xx-large);
+}
 ul {
     list-style-type: none;
 }
@@ -111,19 +127,24 @@ p {
     font-family: var(--font-family-base);
 }
 
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
 /* navbar */
 nav {
     background-color: var(--color-primary);
     position: fixed;
     z-index: 1000;
     width: 100%;
-    box-shadow: 0 0 1rem 2px var(--color-light-grey);
+    box-shadow: 0 0 1rem 1px rgba(0,0,26, 0.5);
 }
 
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: var(--common-padding);
 }
 
@@ -146,6 +167,9 @@ nav .container h1::after {
     flex-wrap: wrap;
 }
 
+.modes {
+    flex-basis: ;
+}
 .light-mode {
     display: none;
 }
@@ -209,4 +233,43 @@ a.active {
 
 .close-icon {
     display: none;
+}
+
+/* Header */
+header {
+    height: 100vh;
+    position: relative;
+}
+
+header .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .container .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-content > * {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: wrap;
+}
+.hero-content .hero-content-col {
+    width: 40%;
+    gap: 2rem;
+}
+
+.hero-content .hero-img img {
+    width: 100%;
 }
