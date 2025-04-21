@@ -41,6 +41,9 @@ html {
     /*colors: Hero H2, */
     --text-color-tertiary: var(--color-light-mode-dark-grey);
     /*colors: Paragraphs, contact cards titles*/
+    --text-color-btn-primary: var(--color-white);
+    --text-color-btn-secondary: var(--color-black);
+    --hover-btn-bg-color: hsl( 0, 84%, 55% );
     --font-family-base: 'paragraph-Open-Sans', "paragraph-Noto-Sans", "paragraph-Roboto", sans-serif;
     --font-family-title: 'header-Amatic', sans-serif;
     --font-family-header: 'header-Inter', sans-serif;
@@ -66,6 +69,9 @@ html {
     --color-quaternary: var(--color-light-grey);
     --text-color-primary: var(--color-white);
     --text-color-secondary: var(--color-white);
+    --text-color-btn-primary: var(--color-dark-mode-black);
+    --text-color-btn-secondary: var(--color-white);
+    --hover-btn-bg-color: hsl( 35, 72%, 55%);
 }
 
 
@@ -243,7 +249,7 @@ header {
 
 header .container {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -267,9 +273,89 @@ header .container .hero-content {
 }
 .hero-content .hero-content-col {
     width: 40%;
-    gap: 2rem;
+    gap: 3rem;
+}
+.hero-content .hero-content-col .btn-group {
+    align-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.hero-content-col .btn-group .btn a {
+    --border-radius: 2rem;
+    background-color: var(--color-tertiary);
+    padding: var(--btn-padding-md);
+    color: var(--text-color-btn-primary);
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+    transition: color var(--animation-duration) ease-in-out;
+    font-weight: var(--font-weight-regular);
+
+}
+
+.hero-content p {
+    color: var(--text-color-tertiary);
+}
+
+.hero-content-col .btn-group .btn a:hover {
+    background-color: var(--hover-btn-bg-color);
+}
+
+.hero-content-col .btn-group .video-btn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap:  1rem;
+    position: relative;
+}
+
+.video-btn {
+    color: var(--text-color-secondary);
+}
+.video-btn > .video-icon {
+  background-color: var(--color-primary);
+  padding: 0.8rem;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  text-align: center;
+  line-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.video-btn > .video-icon::after {
+    content: "";
+    height: 3.2rem;
+    width: 3.2rem;
+    background-color: var(--color-tertiary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.video-btn > .video-btn::before {
+    content: "";
+    height: px;
+    width: 2px;
+    background-color: var(--color-tertiary);
+
 }
 
 .hero-content .hero-img img {
     width: 100%;
+    filter: drop-shadow(0 0 1rem rgba(0,0,26, 0.5));
 }
+
+
+
