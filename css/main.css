@@ -70,7 +70,7 @@ html {
     --color-primary: var(--color-dark-mode-medium-grey);
     --color-secondary: var(--color-dark-mode-light-grey);
     --color-tertiary: var(--color-gold);
-    --color-quaternary: var( --color-dark-mode-darker-grey);
+    --color-quaternary: var(--color-dark-mode-darker-grey);
     --color-quinary: var(--color-dark-mode-dark-grey);
     --text-color-primary: var(--color-white);
     --text-color-secondary: var(--color-white);
@@ -182,13 +182,14 @@ nav .container {
     padding: var(--common-padding);
 }
 
-nav .container h1 {
+.logo {
+    font-family: var(--font-family-header);
     color: var(--text-color-primary);
     font-size: var(--font-size-x-large);
     font-weight: var(--font-weight-bold);
 }
 
-nav .container h1::after {
+.logo::after {
     content: ".";
     color: var(--color-tertiary);
 }
@@ -544,11 +545,11 @@ header .container .hero-content {
     padding: 1rem;
 }
 
-.fa-ul li {
+.chef-card .fa-ul li {
     margin: 1rem 0;
 }
 
-.fa-ul {
+.chef-card .fa-ul {
     width: 10%;
 }
 
@@ -652,7 +653,7 @@ header .container .hero-content {
     transition: transform var(--animation-duration) ease-in-out;
     color: var(--color-white);
     font-size: var(--font-size-xs);
-    
+
 }
 
 .gallery-cards>div:hover .layer {
@@ -688,15 +689,16 @@ header .container .hero-content {
     padding: 1rem 0;
 }
 
-.contact-content > div {
+.contact-content>div {
     width: 100%;
 }
 
-.contact-map { 
+.contact-map {
     width: 100%;
     height: 20rem;
 }
-.contact-map > iframe {
+
+.contact-map>iframe {
     width: 100%;
     height: 100%;
 }
@@ -711,9 +713,10 @@ header .container .hero-content {
     gap: var(--gap);
     text-align: left;
 }
-.contact-info > div {
+
+.contact-info>div {
     width: calc(calc(100% - var(--gap)) / 2);
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -723,24 +726,24 @@ header .container .hero-content {
     border-radius: 0.2rem;
 }
 
-.contact-info > div  h4 {
+.contact-info>div h4 {
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-bold);
     text-transform: capitalize;
     margin-bottom: 0.2rem;
 }
 
-.contact-info > div  p {
+.contact-info>div p {
     font-size: var(--font-size-xs);
     color: var(--text-color-secondary);
 }
 
-.contact-info > div  p span {
+.contact-info>div p span {
     color: var(--text-color-secondary);
     font-weight: var(--font-weight-bold);
 }
 
-.contact-info > div .icon {
+.contact-info>div .icon {
     position: relative;
     width: 3rem;
     height: 3rem;
@@ -749,7 +752,7 @@ header .container .hero-content {
     color: var(--color-tertiary);
 }
 
-.contact-info > div i {
+.contact-info>div i {
     color: var(--text-color-btn-primary);
     position: absolute;
     top: 50%;
@@ -764,7 +767,7 @@ header .container .hero-content {
     box-shadow: 0 0 0.5rem 0.09rem rgba(0, 0, 26, 0.2);
 }
 
-.form-group > div {
+.form-group>div {
     width: 100%;
 }
 
@@ -778,7 +781,7 @@ header .container .hero-content {
     gap: var(--gap);
 }
 
-.form-group > .form-first-row {
+.form-group>.form-first-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -791,6 +794,7 @@ header .container .hero-content {
     width: calc(calc(100% - var(--gap)) / 2);
 
 }
+
 .form-group input,
 .form-group textarea {
     padding: var(--btn-padding-xs);
@@ -807,7 +811,7 @@ header .container .hero-content {
     outline: none;
     border: 1px solid var(--color-tertiary);
 }
- 
+
 .form-group div:not(.form-first-row) input,
 .form-group div:not(.form-first-row) textarea {
     width: 100%;
@@ -826,10 +830,202 @@ header .container .hero-content {
     cursor: pointer;
 }
 
+/* footer */
+
+footer {
+    background-image: url("../images/textured-metal-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-quinary);
+    color: var(--color-white);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    --gap: 1rem;
+    gap: var(--gap);
+}
+
+.footer-content>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content .about .logo {
+    color: var(--color-white);
+}
+
+.about {
+    --about-width: calc(calc(100% - var(--gap) * 2) / 4);
+    width: var(--about-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+}
+.footer-content h3 {
+    width: 100%;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    text-transform: capitalize;
+    position: relative;
+}
+.about h3 {
+    width: 100%;
+    text-align: center;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    text-transform: capitalize;
+    position: relative;
+    padding: 1rem;
+    border-bottom: 0.2rem solid var(--color-light-mode-dark-grey);
+}
+
+.about .fa-ul {
+    margin: 0;
+    padding: 0;
+}
+
+.about .social-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about .social-footer a {
+    padding: 0;
+    margin: 0;
+    color: var(--color-white);
+    font-size: var(--font-size-medium);
+}
+
+.about>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+.footer-content .about img {
+    width: calc(calc(100% - var(--gap)) / 6);
+}
+
+footer  .contact-details {
+    width: calc(calc(100% - var(--gap) * 2) / 4);
+  }
+  
+  footer .subscription {
+    width: calc(calc(100% - var(--gap) * 2) / 2);
+  }
+
+footer .subscription-box p {
+    margin-block: 0.625rem;
+}
+
+footer .subscription-group {
+    margin-block: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+footer .subscription-group input {
+    flex-grow: 1;
+    padding: 0.625rem;
+}
+
+footer .subscription-group input:focus-visible {
+    outline: none;
+}
+
+footer .subscription-group button {
+    --border-radius: 0;
+    --padding: 0.625rem;
+    min-width: 6.875rem;
+}
+
+footer .quick-links ul {
+    --gap: 1.25rem;
+    margin-top: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--gap);
+}
+footer .footer-content a {
+    color: var(--color-white);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+    text-transform: capitalize;
+}
 
 
+footer .quick-links ul li {
+    width: calc(calc(100% - var(--gap)) / 2);
+    padding: 5px;
+    position: relative;
+    transition: transform var(--animation-duration),
+        background-color var(--animation-duration);
+}
 
+footer .quick-links ul li:hover {
+    transform: translateX(10px);
+    background-color: #222;
+}
 
+footer .quick-links ul li::before {
+    content: "\f105";
+    font: var(--fa-font-solid);
+    margin-right: 5px;
+}
 
+footer .contact-details h3 {
+    margin-bottom: 10px;
+}
 
+footer .contact-details ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
+footer .contact-details ul li i {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-tertiary);
+    font-size: 1.375rem;
+    cursor: pointer;
+}
+
+.subscription-group .form-btn {
+    padding: var(--btn-padding-md);
+    background-color: var(--color-tertiary);
+    color: var(--text-color-btn-primary);
+    border-radius:0.5rem;
+    border: 0;
+}
+
+.subscription-group .form-btn:hover {
+    background-color: var(--hover-btn-bg-color);
+    cursor: pointer;
+}
