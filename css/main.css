@@ -757,5 +757,79 @@ header .container .hero-content {
     transform: translate(-50%, -50%);
 }
 
+.contact-form {
+    padding: 1.5rem;
+    border-radius: 0.2rem;
+    background-color: var(--color-quinary);
+    box-shadow: 0 0 0.5rem 0.09rem rgba(0, 0, 26, 0.2);
+}
+
+.form-group > div {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    --gap: 1rem;
+    gap: var(--gap);
+}
+
+.form-group > .form-first-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-first-row input {
+    width: calc(calc(100% - var(--gap)) / 2);
+
+}
+.form-group input,
+.form-group textarea {
+    padding: var(--btn-padding-xs);
+    border-radius: 0.2rem;
+    color: var(--text-color-secondary);
+    border: 2px solid var(--color-quaternary);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-family-header);
+    font-weight: var(--font-weight-regular);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 1px solid var(--color-tertiary);
+}
+ 
+.form-group div:not(.form-first-row) input,
+.form-group div:not(.form-first-row) textarea {
+    width: 100%;
+}
+
+.form-group .form-btn {
+    padding: var(--btn-padding-lg);
+    background-color: var(--color-tertiary);
+    color: var(--text-color-btn-primary);
+    border-radius: 1rem;
+    border: 0;
+}
+
+.form-group .form-btn:hover {
+    background-color: var(--hover-btn-bg-color);
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 
