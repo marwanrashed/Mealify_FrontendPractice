@@ -502,3 +502,29 @@ header .container .hero-content {
     font-style: italic;
     padding: 1rem;
 }
+
+.fa-ul li {
+    margin: 1rem 0;
+}
+.fa-ul {
+    width: 10%;
+}
+
+.social-box a {
+    margin: 0;
+    padding: 0;
+}
+
+.social-box {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.3rem;
+    top: 10%;
+    right: -10%;
+    transition: transform calc(var(--animation-duration) *2) ease-in-out;
+    
+}
+
+.chef-card:hover .social-box {
+    transform: translateX(-120%);
+}
