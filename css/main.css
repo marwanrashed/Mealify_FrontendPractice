@@ -10,6 +10,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 10rem;
 }
+
 :root {
     /*  Default Light Mode Colors */
     --color-light-mode-black: #212529;
@@ -21,7 +22,7 @@ html {
     --color-light-mode-darkest-grey: #37373F;
     /* Default Dark Mode Colors */
     --color-dark-mode-black: #212529;
-    --color-dark-mode-light-grey: #252525 ;
+    --color-dark-mode-light-grey: #252525;
     --color-dark-mode-medium-grey: #202020;
     --color-dark-mode-dark-grey: #171717;
     --color-dark-mode-darker-grey: #0D0D0D;
@@ -44,7 +45,7 @@ html {
     /*colors: Paragraphs, contact cards titles*/
     --text-color-btn-primary: var(--color-white);
     --text-color-btn-secondary: var(--color-black);
-    --hover-btn-bg-color: hsl( 0, 84%, 55% );
+    --hover-btn-bg-color: hsl(0, 84%, 55%);
     --font-family-base: 'paragraph-Open-Sans', "paragraph-Noto-Sans", "paragraph-Roboto", sans-serif;
     --font-family-title: 'header-Amatic', sans-serif;
     --font-family-header: 'header-Inter', sans-serif;
@@ -75,7 +76,7 @@ html {
     --text-color-secondary: var(--color-white);
     --text-color-btn-primary: var(--color-dark-mode-black);
     --text-color-btn-secondary: var(--color-white);
-    --hover-btn-bg-color: hsl( 35, 72%, 55%);
+    --hover-btn-bg-color: hsl(35, 72%, 55%);
 }
 
 
@@ -89,11 +90,11 @@ html {
     --margin-bottom: 0;
     --padding-top: 0;
     --padding-bottom: 0;
-    --padding-left:0;
-    --padding-right:0;
+    --padding-left: 0;
+    --padding-right: 0;
     margin-top: var(--margin-top);
     margin-bottom: var(--margin-bottom);
-    
+
 }
 
 /* shared */
@@ -108,7 +109,7 @@ h6 {
     color: var(--text-color-tertiary);
     font-weight: var(--font-weight-regular);
     line-height: var(--font-size-medium);
-    
+
 }
 
 section h2 {
@@ -117,7 +118,7 @@ section h2 {
     text-transform: uppercase;
 }
 
-header h2, 
+header h2,
 section h3 {
     font-family: var(--font-family-title);
     color: var(--text-color-secondary);
@@ -131,14 +132,16 @@ section h3 {
     font-weight: var(--font-weight-regular);
 }
 
-section h3 > span {
+section h3>span {
     font-family: var(--font-family-title);
     color: var(--color-tertiary);
 }
+
 header h2 {
     font-size: var(--font-size-xxx-large);
     font-weight: var(--font-weight-bold);
 }
+
 ul {
     list-style-type: none;
 }
@@ -157,6 +160,7 @@ p {
 .bg-primary {
     background-color: var(--color-primary);
 }
+
 .bg-secondary {
     background-color: var(--color-secondary);
 }
@@ -167,7 +171,7 @@ nav {
     position: fixed;
     z-index: 1000;
     width: 100%;
-    box-shadow: 0 0 1rem 1px rgba(0,0,26, 0.5);
+    box-shadow: 0 0 1rem 1px rgba(0, 0, 26, 0.5);
 }
 
 nav .container {
@@ -200,15 +204,17 @@ nav .container h1::after {
 .light-mode {
     display: none;
 }
+
 .dark-mode {
     display: block;
     cursor: pointer;
 }
-#mode:checked ~ label .dark-mode {
+
+#mode:checked~label .dark-mode {
     display: none;
 }
 
-#mode:checked ~ label .light-mode {
+#mode:checked~label .light-mode {
     display: block;
     cursor: pointer;
 }
@@ -217,7 +223,7 @@ html:not(html:has(:target)) li a[href="#home"]::before,
 html:has(.landing:target) li a[href="#home"]::before,
 html:has(.chefs:target) li a[href="#chefs"]::before,
 html:has(.gallery:target) li a[href="#gallery"]::before,
-html:has(.contact:target) li a[href="#contact"]::before{
+html:has(.contact:target) li a[href="#contact"]::before {
     width: calc(100% - (var(--link-border-width)*2));
 }
 
@@ -225,8 +231,8 @@ html:not(html:has(:target) li a[href="#home"]),
 html:has(.landing:target) li a[href="#home"],
 html:has(.chefs:target) li a[href="#chefs"],
 html:has(.gallery:target) li a[href="#gallery"],
-html:has(.contact:target) li a[href="#contact"]{
-  color: var(--text-color-primary);
+html:has(.contact:target) li a[href="#contact"] {
+    color: var(--text-color-primary);
 }
 
 .nav-links li a {
@@ -284,7 +290,7 @@ header .container .hero-content {
     flex-wrap: wrap;
 }
 
-.hero-content > * {
+.hero-content>* {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -292,10 +298,12 @@ header .container .hero-content {
     align-items: center;
     flex: wrap;
 }
+
 .hero-content .hero-content-col {
     width: 40%;
     gap: 3rem;
 }
+
 .hero-content .hero-content-col .btn-group {
     align-self: flex-start;
     display: flex;
@@ -329,7 +337,7 @@ header .container .hero-content {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    gap:  1rem;
+    gap: 1rem;
     position: relative;
 }
 
@@ -342,22 +350,22 @@ header .container .hero-content {
     color: var(--color-tertiary);
 }
 
-.video-btn > .video-icon {
-  background-color: var(--color-primary);
-  padding: 0.8rem;
-  border-radius: 50%;
-  width: 2.2rem;
-  height: 2.2rem;
-  text-align: center;
-  line-height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  
+.video-btn>.video-icon {
+    background-color: var(--color-primary);
+    padding: 0.8rem;
+    border-radius: 50%;
+    width: 2.2rem;
+    height: 2.2rem;
+    text-align: center;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
 }
 
-.video-btn > .video-icon::after {
+.video-btn>.video-icon::after {
     content: "";
     height: 3.2rem;
     width: 3.2rem;
@@ -371,7 +379,7 @@ header .container .hero-content {
     z-index: -1;
 }
 
-.video-btn > .video-btn::before {
+.video-btn>.video-btn::before {
     content: "";
     height: px;
     width: 2px;
@@ -382,8 +390,8 @@ header .container .hero-content {
 
 .hero-content .hero-img img {
     width: 100%;
-    filter: drop-shadow(0 0 1rem rgba(0,0,26, 0.5));
-    
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 26, 0.5));
+
 }
 
 .hero-content .hero-img:hover {
@@ -391,17 +399,49 @@ header .container .hero-content {
 }
 
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
 }
 
 
@@ -409,6 +449,7 @@ header .container .hero-content {
 .chefs {
     text-align: center;
 }
+
 .chefs-title {
     margin-bottom: 3rem;
 }
@@ -427,7 +468,7 @@ header .container .hero-content {
     width: calc(calc(100% - var(--gap) *2) / 3);
     border-radius: 1.5rem;
     background-color: var(--color-quinary);
-    box-shadow: 0 0 1rem 1px rgba(0,0,26, 0.5);
+    box-shadow: 0 0 1rem 1px rgba(0, 0, 26, 0.5);
     transition: transform var(--animation-duration) ease-in-out;
     position: relative;
     overflow: hidden;
@@ -442,7 +483,7 @@ header .container .hero-content {
     overflow: hidden;
 }
 
-.chefs picture .chef-img{
+.chefs picture .chef-img {
     width: 100%;
     overflow: hidden;
 }
@@ -460,11 +501,11 @@ header .container .hero-content {
     background-repeat: repeat-x;
     width: 100%;
     height: 3.5rem;
-  }
+}
 
-  :root:has(#mode:checked) .chef-cards .chef-card picture:before {
+:root:has(#mode:checked) .chef-cards .chef-card picture:before {
     background-image: url("../images/team-shape-dark.svg");
-  }
+}
 
 /* .waves-svg {
     position: absolute;
@@ -484,19 +525,19 @@ header .container .hero-content {
     padding: 1.5rem;
 }
 
-.chef-content > h4 {
+.chef-content>h4 {
     font-size: var(--font-size-small);
     color: var(--text-color-secondary);
     font-weight: var(--font-weight-bold);
     text-transform: capitalize;
 }
 
-.chef-content > h4 + span {
+.chef-content>h4+span {
     color: var(--text-color-tertiary);
     text-transform: capitalize;
 }
 
-.chef-content > p {
+.chef-content>p {
     color: var(--text-color-tertiary);
     font-size: var(--font-size-xs);
     font-style: italic;
@@ -506,6 +547,7 @@ header .container .hero-content {
 .fa-ul li {
     margin: 1rem 0;
 }
+
 .fa-ul {
     width: 10%;
 }
@@ -522,9 +564,105 @@ header .container .hero-content {
     top: 10%;
     right: -10%;
     transition: transform calc(var(--animation-duration) *2) ease-in-out;
-    
+
 }
 
 .chef-card:hover .social-box {
     transform: translateX(-120%);
+}
+
+/* gallery */
+.gallery {
+    text-align: center;
+    background-color: var(--color-secondary);
+}
+
+.gallery-title {
+    margin-bottom: 2rem;
+}
+
+.gallery-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2% 2%;
+    grid-template-areas:
+        "pizza beef-steak burger"
+        "levitation-pizza beef-steak fried-chicken"
+        "levitation-pizza frittata kebab";
+}
+
+.gallery-cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-cards>div {
+    transition: transform var(--animation-duration) ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: 0.3rem solid var(--color-white);
+}
+
+.gallery-cards>div:hover {
+    transform: scale(1.05);
+}
+
+.pizza {
+    grid-area: pizza;
+}
+
+.levitation-pizza {
+    grid-area: levitation-pizza;
+}
+
+.beef-steak {
+    grid-area: beef-steak;
+}
+
+.burger {
+    grid-area: burger;
+}
+
+.fried-chicken {
+    grid-area: fried-chicken;
+}
+
+.kebab {
+    grid-area: kebab;
+}
+
+.frittata {
+    grid-area: frittata;
+}
+
+.gallery-cards .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100%);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform var(--animation-duration) ease-in-out;
+    color: var(--color-white);
+    font-size: var(--font-size-xs);
+    
+}
+
+.gallery-cards>div:hover .layer {
+    transform: translateY(0%);
+}
+
+.gallery-cards .layer h2 {
+    font-size: var(--font-size-large);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
+    text-transform: capitalize;
+    margin-bottom: 1rem;
 }
