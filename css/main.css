@@ -483,3 +483,22 @@ header .container .hero-content {
     gap: 1rem;
     padding: 1.5rem;
 }
+
+.chef-content > h4 {
+    font-size: var(--font-size-small);
+    color: var(--text-color-secondary);
+    font-weight: var(--font-weight-bold);
+    text-transform: capitalize;
+}
+
+.chef-content > h4 + span {
+    color: var(--text-color-tertiary);
+    text-transform: capitalize;
+}
+
+.chef-content > p {
+    color: var(--text-color-tertiary);
+    font-size: var(--font-size-xs);
+    font-style: italic;
+    padding: 1rem;
+}
