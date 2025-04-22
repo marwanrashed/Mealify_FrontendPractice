@@ -186,6 +186,12 @@ Media Query
 
 @media screen and (max-width: 1024px) {
 
+    .header  {
+        width: 100%;
+        height: auto;
+    }
+
+    
     header .container .hero-content {
         width: 100%;
         display: flex;
@@ -233,6 +239,10 @@ Media Query
 
     .footer-content > div {
         width: 100%;
+    }
+
+    .footer-content {
+        text-align: center;
     }
 
 }
