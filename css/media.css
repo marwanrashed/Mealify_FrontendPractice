@@ -175,6 +175,81 @@ Media Query
 }
 
 
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    header .container .hero-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-content .hero-content-col  {
+        order: 3;
+    
+    }
+
+    .chef-cards {
+        flex-direction: column;
+    }
+
+    .chef-cards .chef-card {
+        width: 100%;
+    }
+
+    .gallery-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .contact-content .contact-info {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contact-info>div {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-content > div {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 1536px) {
+    .hero-content .hero-content-col .btn-group {
+        display: flex;
+        flex-direction: column;
+ 
+    }
+    .hero-content-col .btn-group .btn a {
+        border-radius: var(--border-radius);
+    }
+
+}
+
+
 @media screen and (max-width: 1024px) {
     .menu-icon {
         display: block;
